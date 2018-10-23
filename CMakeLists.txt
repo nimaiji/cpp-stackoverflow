@@ -4,4 +4,4 @@ project(cpp-stackoverflow)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES main.cpp)
-add_executable(tarining3 ${SOURCE_FILES})
+add_executable(cpp-stackoverflow ${SOURCE_FILES})
