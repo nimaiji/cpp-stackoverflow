@@ -12,6 +12,10 @@ public:
     string DisplayName, Email;
 
     bool validatePassword(string password);
+    virtual bool sendPost()=0;
+    bool editPost();
+    bool sendComment();
+    bool editComment();
 
     void setDisplayName(string displayName);
     void setEmail(string email);
