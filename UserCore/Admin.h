@@ -10,6 +10,8 @@ public:
         this->Email = "admin@admin.com";
         this->Password = "admin";
     }
+
+    bool deleteUser();
 };
 
 
