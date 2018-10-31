@@ -7,9 +7,10 @@
 
 #include <string.h>
 #include <iostream>
+#include "Password.h"
 class AbstractUser {
 public:
-    string DisplayName, Email;
+    string displayName, email;
 
     bool validatePassword(string password);
     virtual bool sendPost()=0;
@@ -23,7 +24,7 @@ public:
     string getEmail();
 
 protected:
-    string Password;
+    Password password;
 };
 
 

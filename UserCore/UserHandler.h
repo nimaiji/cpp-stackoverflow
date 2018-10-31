@@ -1,7 +1,3 @@
-//
-// Created by Nima iji on 10/24/2018 AD.
-//
-
 #ifndef CPP_STACKOVERFLOW_USERHANDLER_H
 #define CPP_STACKOVERFLOW_USERHANDLER_H
 
@@ -9,15 +5,25 @@
 #include "Admin.h"
 #include "Employer.h"
 
+enum userState {
+    IN, OUT, ADMIN
+};
+
 class UserHandler {
+    UserState state;
+    AbstractUser *me;
 public:
-    bool signIn(Employer employer);
-    bool signIn(User user);
-    bool signIn(Admin admin);
-    bool signOut(Employer employer);
-    bool signOut(User user);
-    bool signOut(Admin admin);
-    bool editInformation(string displayName,string email,string password);
+    UserHandler(AbstractUser user) : me(user) {
+        state = OUT;
+    }
+
+    bool signIn(AbstractUser user);
+
+    bool signOut(AbstractUser user);
+
+    void changeEmail(string email);
+
+    void changePassword(Password password);
 };
 
 
