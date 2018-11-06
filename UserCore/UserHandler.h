@@ -4,6 +4,7 @@
 #include "User.h"
 #include "Admin.h"
 #include "Employer.h"
+#include "DatabaseCore/Database.h"
 
 enum userState {
     IN, OUT, ADMIN
@@ -24,6 +25,7 @@ public:
     void changeEmail(string email);
 
     void changePassword(Password password);
+
 };
 
 
